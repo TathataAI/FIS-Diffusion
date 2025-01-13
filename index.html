@@ -127,10 +127,10 @@ We propose Visual Co-Adaptation (VCA), a framework that leverages a pre-trained 
     <div class="container">
       <!-- Single PDF container -->
       <div class="item has-text-centered">
-        <embed src="eval.pdf" type="application/pdf" width="100%" height="600px" />
+        <embed src="ambiguious.jpg" type="application/pdf" width="100%" height="600px" />
         <!-- Subtitle text container with centered text -->
         <p class="subtitle">
-          The workflow demonstrates how human preferences guide text-to-image diffusion, with a DPO-trained reward model evaluating image-prompt alignment and PPO updating LoRA parameters while keeping the diffusion model fixed.
+          Demonstration of disambiguation in text-to-image generation. Each row showcases examples of ambiguous prompts and their corresponding visual interpretations. For instance, the prompt "jam" results in both "fruit jam" and "traffic jam," while "bat" is interpreted as both a flying mammal and a baseball bat. Similarly, "spring" leads to "spring water" and "spring flower," and "mouse" generates both a "computer mouse" and an actual rodent. This highlights the importance of context and specificity in resolving ambiguities, illustrating the model's capability to handle polysemy effectively.
         </p>
       </div>
     </div>
@@ -143,10 +143,10 @@ We propose Visual Co-Adaptation (VCA), a framework that leverages a pre-trained 
     <div class="container">
       <!-- Single image container -->
       <div class="item has-text-centered">
-        <img src="eval.pdf" alt="MY ALT TEXT" />
+        <img src="imagereward2.jpg" alt="MY ALT TEXT" />
         <!-- Subtitle text container with centered text -->
         <p class="subtitle">
-         The workflow demonstrates how human preferences guide text-to-image diffusion, with a DPO-trained reward model evaluating image-prompt alignment and PPO updating LoRA parameters while keeping the diffusion model fixed.
+         Overview of the overall framework: (a) The LLM refines the user's prompt through Word Swap, Adding a Phrase, or Attention Re-weighting, using PPO until satisfaction; (b) Effects of these operations on the image are demonstrated; (c) PPO's internal loop computes rewards based on CLIP feedback to meet the threshold or limit.
         </p>
       </div>
     </div>
@@ -161,11 +161,10 @@ We propose Visual Co-Adaptation (VCA), a framework that leverages a pre-trained 
     <div class="container">
       <!-- Single image container -->
       <div class="item has-text-centered">
-        <img src="visualization.jpg" alt="MY ALT TEXT" />
+        <img src="flowchart.jpg" alt="MY ALT TEXT" />
         <!-- Subtitle text container with centered text -->
         <p class="subtitle">
-            A comparison of video generation quality across different algorithms, with and
-without the use of an adapter.
+            The flowchart of our framework, comprising a high-level Interpreter Agent and a low-level Controller Agent for text-to-image generation.
       </h2>
         </p>
       </div>
@@ -180,11 +179,10 @@ without the use of an adapter.
     <div class="container">
       <!-- Single image container -->
       <div class="item has-text-centered">
-        <img src="token.jpg" alt="MY ALT TEXT" />
+        <img src="clarify.jpg" alt="MY ALT TEXT" />
         <!-- Subtitle text container with centered text -->
         <p class="subtitle">
-            Figure 4: Comparison of token configurations—remove shared, shared, and enhanced un-
-shared—using LPIPS, CLIP, and FID metrics.</h2>
+            Resolving Ambiguous Prompts: Addressing Insufficient Context and Semantic Uncertainty through Clarifying Questions and Visual Setups.</h2>
         </p>
       </div>
     </div>
@@ -198,12 +196,10 @@ shared—using LPIPS, CLIP, and FID metrics.</h2>
     <div class="container">
       <!-- Single image container -->
       <div class="item has-text-centered">
-        <img src="atten.jpg" alt="MY ALT TEXT" />
+        <img src="Visualization.jpg" alt="MY ALT TEXT" />
         <!-- Subtitle text container with centered text -->
         <p class="subtitle">
-            Visualization of attention maps from Unet’s third upsampling block, comparing
-base and adapter models across 1000 timesteps. The corresponding timesteps from top to
-bottom are 1, 541, and 981.
+            The figure illustrates the iterative process of refining a prompt through six rounds. In each round, modifications are made using different strategies: adding phrases, attention re-weighting, and word swap. Each step's impact on the description of the image is shown visually, along with the type of modification used.
         </h2>
         </p>
       </div>
@@ -220,12 +216,10 @@ bottom are 1, 541, and 981.
     <div class="container">
       <!-- Single image container -->
       <div class="item has-text-centered">
-        <img src="token_appendix.jpg" alt="MY ALT TEXT" />
+        <img src="visualization_beans.jpg" alt="MY ALT TEXT" />
         <!-- Subtitle text container with centered text -->
         <p class="subtitle">
-            Visualization of token manipulation effects on image generation for a lion. ”En-
-hanced Unshared Tokens” combines shared and unshared embeddings, appending the shared
-token as a trainable parameter to strengthen representation.
+            The comparison showcases our model’s ability to precise control and efficiently align with user intentions, such as refining soup images by adding specific elements like croutons. By the third round, our model fully captures the user's intention, demonstrating minimal need for further actions.
         </h2>
         </p>
       </div>
@@ -240,12 +234,10 @@ token as a trainable parameter to strengthen representation.
     <div class="container">
       <!-- Single image container -->
       <div class="item has-text-centered">
-        <img src="feature.jpg" alt="MY ALT TEXT" />
+        <img src="userstudy.jpg" alt="MY ALT TEXT" />
         <!-- Subtitle text container with centered text -->
         <p class="subtitle">
-                   Comparison of single-channel feature heatmaps with and without the adapter across
-frames and timesteps, with features from the attention layer in UNet blocks 4-11. Labels f1/f2
-denote adjacent frames, and t1/t2 represent timesteps (t1=932, t2=941) from the DDPM.
+                   The chart shows user feedback on a model, highlighting mixed responses with positive feedback on image coherence and capturing intentions, but concerns over response time.
         </h2>
         </p>
       </div>
@@ -261,10 +253,10 @@ denote adjacent frames, and t1/t2 represent timesteps (t1=932, t2=941) from the 
     <div class="container">
       <!-- Single image container -->
       <div class="item has-text-centered">
-        <img src="openworld.png" alt="MY ALT TEXT" />
+        <img src="strategy.jpg" alt="MY ALT TEXT" />
         <!-- Subtitle text container with centered text -->
         <p class="subtitle">
-            Visual comparison with other advanced approaches on DCIM, REAL, LIME and MEF.
+            The figure shows the various operations applied during different rounds.
         </h2>
         </p>
       </div>
@@ -272,86 +264,6 @@ denote adjacent frames, and t1/t2 represent timesteps (t1=932, t2=941) from the 
   </div>
 </section>
 <!-- End Single Image Display -->
-
-<!-- Single Image Display -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Single image container -->
-      <div class="item has-text-centered">
-        <img src="timesteps.jpg" alt="MY ALT TEXT" />
-        <!-- Subtitle text container with centered text -->
-        <p class="subtitle">
-            Performance comparison of video generation methods evaluated using metrics across
-temporal-aware loss training ranges (0.5–1.0t, 0.8–1.0t, 0.9–1.0t) and adapter inference ranges
-(0.5–1.0t, 0.8–1.0t, 0.9–1.0t), with t set to 1000.
-        </h2>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Single Image Display -->
-
-
-<!-- Single Image Display -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Single image container -->
-      <div class="item has-text-centered">
-        <img src="stepvis.jpg" alt="MY ALT TEXT" />
-        <!-- Subtitle text container with centered text -->
-        <p class="subtitle">
-            Visual comparison of a 0.5–1.0t training range for temporal-aware loss with a
-0.9–1.0t adapter activation in inference range versus setting both to 0.5t(t = 1000).
-        </h2>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Single Image Display -->
-
- <!-- Single Image Display -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Single image container -->
-      <div class="item has-text-centered">
-        <img src="kernel.jpg" alt="MY ALT TEXT" />
-        <!-- Subtitle text container with centered text -->
-        <p class="subtitle">
-            Comparison of step and kernel sizes N (·) within bilateral filtering inversion in the
-Stable Diffusion pipeline. The observed trends are consistent with those in vid2vid and three
-other algorithms (not shown due to space limitations).
-      </h2>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Single Image Display -->
-  
- <!-- Single Image Display -->
-<section class="hero is-small">
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 <!-- Statcounter tracking code -->
   
